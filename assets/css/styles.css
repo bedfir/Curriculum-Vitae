@@ -174,17 +174,37 @@ body.scale-cv {
   gap: .25rem;
 }
 
+/* wrapper div js */
+.scale-cv .wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.scale-cv .languages__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scale-cv .references__container {
+  grid-template-columns: none;
+}
+
 .scale-cv .skills__name {
   margin-bottom: var(--mb-1);
 }
 
-/* .scale-cv .experience,
+.scale-cv .social,
+.scale-cv .profile,
+.scale-cv .education,
+.scale-cv .skills,
+.scale-cv .experience,
 .scale-cv .certificate,
 .scale-cv .references,
 .scale-cv .languages,
 .scale-cv .interests {
   padding: 0.50rem 0.80rem;
-} */
+}
 
 .scale-cv .interests__container {
   column-gap: 2.5rem;

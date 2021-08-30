@@ -87,6 +87,31 @@ function scaleCv() {
     document.body.classList.add('scale-cv');
 }
 
+// Create a div to wrap references and languages.
+
+function wrap() {
+    let divWrapper = document.createElement('div');
+    divWrapper.className = 'wrapper';
+
+    const references = document.querySelector('.references');
+    const languages = document.querySelector('.languages');
+
+    divWrapper.append(references, languages);
+    let rightSections = document.querySelector('.resume__right');
+    rightSections.insertBefore(divWrapper, rightSections.childNodes[8]);
+}
+// remove Wrapper Element
+function removeWrap() {
+    // document.querySelector('.wrapper').remove();
+    const fragment = document.createDocumentFragment();
+    const wrappElem = document.querySelector('.wrapper')
+    while (wrappElem.firstChild) {
+        fragment.appendChild(wrappElem.firstChild);
+    }
+    wrappElem.parentNode.replaceChild(fragment, wrappElem);
+}
+
+
 /*==================== REMOVE THE SIZE WHEN THE CV IS DOWNLOADED ====================*/
 function removeScale() {
     document.body.classList.remove('scale-cv');
@@ -112,22 +137,27 @@ let opt = {
     jsPDF: {
         format: 'a4',
         orientation: 'portrait'
-    }  
+    }
 };
 
 // Function to call areaCv and Html2Pdf options 
 function generateResume() {
-    html2pdf(areaCv,opt)
+    html2pdf(areaCv, opt)
 }
 
 // When the button is clicked, it executes the three functions
 resumeButton.addEventListener('click', () => {
     // 1. The class .scale-cv is added to the body, where it reduces the size of the elements
+    wrap();
     scaleCv()
 
     // 2. The PDF is generated
     generateResume();
 
     // 3. The .scale-cv class is removed from the body after 5 seconds to return to normal size.
-    setTimeout(removeScale, 5000)
+    setTimeout(() => {
+        removeWrap();
+        removeScale();
+
+    }, 5000)
 })
