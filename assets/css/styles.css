@@ -108,7 +108,8 @@ body.scale-cv {
 }
 
 .scale-cv .section {
-  padding: 1.5rem .80rem;
+  /* padding: 1.5rem .80rem; */
+  padding: 0.45rem 0.80rem;
 }
 
 .scale-cv .section-title {
@@ -194,22 +195,12 @@ body.scale-cv {
   margin-bottom: var(--mb-1);
 }
 
-.scale-cv .social,
-.scale-cv .profile,
-.scale-cv .education,
-.scale-cv .skills,
-.scale-cv .experience,
-.scale-cv .certificate,
-.scale-cv .references,
-.scale-cv .languages,
-.scale-cv .interests {
-  padding: 0.50rem 0.80rem;
-}
 
 .scale-cv .interests__container {
   column-gap: 2.5rem;
 }
 
+/*========== CLASS CSS ==========*/
 body {
   margin: 0 0 var(--header-height) 0;
   padding: 0;
@@ -250,7 +241,6 @@ img {
 
 
 
-/*========== CLASS CSS ==========*/
 .section {
   padding: 1.5rem 0;
 }
