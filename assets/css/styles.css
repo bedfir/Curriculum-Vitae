@@ -107,7 +107,7 @@ body.scale-cv {
 }
 
 .scale-cv .section {
-  /* padding: 1.5rem .80rem; */
+  padding: 15.7px 0.8rem;
   padding: 0.55rem 0.8rem;
 }
 
@@ -182,12 +182,12 @@ body.scale-cv {
 
 .scale-cv .languages__content {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
 }
 
 .scale-cv .references__container {
-  grid-template-columns: none;
+  /* grid-template-columns: none; */
 }
 
 .scale-cv .skills__name {

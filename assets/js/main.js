@@ -99,7 +99,7 @@ function scaleCv() {
 
 // Create a div to wrap references and languages.
 
-function wrap() {
+/* function wrap() {
   let divWrapper = document.createElement("div");
   divWrapper.className = "wrapper";
 
@@ -119,7 +119,7 @@ function removeWrap() {
     fragment.appendChild(wrappElem.firstChild);
   }
   wrappElem.parentNode.replaceChild(fragment, wrappElem);
-}
+} */
 
 /*==================== REMOVE THE SIZE WHEN THE CV IS DOWNLOADED ====================*/
 function removeScale() {
@@ -157,7 +157,7 @@ function generateResume() {
 // When the button is clicked, it executes the three functions
 resumeButton.addEventListener("click", () => {
   // 1. The class .scale-cv is added to the body, where it reduces the size of the elements
-  wrap();
+  // wrap();
   scaleCv();
 
   // 2. The PDF is generated
@@ -166,7 +166,7 @@ resumeButton.addEventListener("click", () => {
   // 3. The .scale-cv class is removed from the body after 5 seconds to return to normal size.
   // The .wrapper class is removed too
   setTimeout(() => {
-    removeWrap();
+    // removeWrap();
     removeScale();
   }, 5000);
 });
